@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "RainForest Hawaii-sskjorta",
+    "brand": "H&M",
+    "price": 499,
+    "articleNumber": "12345",
+    "color": "NavyBlÅ",
+    "description": "En enkel blå t-shirt i bomull.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 2,
+    "name": "Jungle Bird",
+    "brand": "GANT",
+    "price": 2549,
+    "articleNumber": "23456",
+    "color": "Röd",
+    "description": "En mjuk och skön silk Hawaii skjorta",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 3,
+    "name": "Orchid Paradise",
+    "brand": "Waimea Causals",
+    "price": 699,
+    "articleNumber": "34567",
+    "color": "Ljus blå",
+    "description": "Klassiska Aloha Skjorta.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 4,
+    "name": "Heliconia Paradise",
+    "brand": "Paradise Found",
+    "price": 799,
+    "articleNumber": "45678",
+    "color": "Svart",
+    "description": "En snygg svart Hawaii skjorta i bomull.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 5,
+    "name": "Ocean Coral",
+    "brand": "Two Palms Hawaii",
+    "price": 732,
+    "articleNumber": "56789",
+    "color": "Korall",
+    "description": "En tun linné Korall färgat Hawaii-skjorta med palm motiver.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 6,
+    "name": "Flamingo Go Aqua",
+    "brand": "Aloha Republic",
+    "price": 699,
+    "articleNumber": "67890",
+    "color": "Aqua",
+    "description": "En bekväm och luftig Aquablå färgat Hawaii skjorta med flamingo motiver",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 7,
+    "name": "Ladies Waikiki",
+    "brand": "Nancy Trend",
+    "price": 1199,
+    "articleNumber": "78901",
+    "color": "Ljus blå",
+    "description": "Snygg silke ljus blå Hawaii dam-skjorta med papegoja motiver på",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 8,
+    "name": "Ladies Ginger Red",
+    "brand": "Paradise Found",
+    "price": 1099,
+    "articleNumber": "89012",
+    "color": "Blå",
+    "description": "Röd silke dam-skjorta med tropisk blommor",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 9,
+    "name": "Ljusblå Skjorta",
+    "brand": "Aloha Shirt Shop",
+    "price": 999,
+    "articleNumber": "90123",
+    "color": "Blå",
+    "description": "En silke blå dam-skjorta i Tropiska gröna planter.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 10,
+    "name": "Paradise Black",
+    "brand": "Paradise Found",
+    "price": 999,
+    "articleNumber": "70673",
+    "color": "Svart",
+    "description": "En fin svart silke dam-skjorta med tropiska blommor",
+    "image": "https://via.placeholder.com/150"
+  }
+]
