@@ -13,7 +13,11 @@ function ProductModal(props) {
   return (
     <div className="modal" id="modal">
       <div className="modal-content">
-        <img src={product.image} alt={product.name} />
+        <img
+          style={{ width: "150px" }}
+          src={product.image}
+          alt={product.name}
+        />
         <h3>{product.name}</h3>
         <p>{product.description}</p>
         <p>Pris: {product.price} kr</p>

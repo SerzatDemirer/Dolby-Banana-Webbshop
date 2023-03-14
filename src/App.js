@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Search from "./SearchBar";
-import ProductList from "./ProductList";
+import Product from "./Product";
 import Cart from "./Cart";
 import data from "./Products.json";
 import "./App.css";
+import sun from "./dlf.pt-sunset-clipart-png-664466.png";
 
 function App() {
   // State variables
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState({});
+  const [cart, setCart] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   // Fetch product data from a JSON file
@@ -18,29 +19,33 @@ function App() {
 
   // Add an item to the cart or increase its quantity
   const handleAddToCart = (product) => {
-    setCart((currentCart) => {
-      const newCart = { ...currentCart };
-      newCart[product.id] = newCart[product.id] ? newCart[product.id] + 1 : 1;
-      return newCart;
-    });
+    const index = cart.findIndex((item) => item.id === product.id);
+    if (index >= 0) {
+      const newCart = [...cart];
+      newCart[index].quantity += 1;
+      setCart(newCart);
+    } else {
+      const newCart = [...cart, { ...product, quantity: 1 }];
+      setCart(newCart);
+    }
   };
 
   // Remove an item from the cart or decrease its quantity
   const handleRemoveFromCart = (productId) => {
-    setCart((currentCart) => {
-      const newCart = { ...currentCart };
-      if (newCart[productId] > 1) {
-        newCart[productId] -= 1;
-      } else {
-        delete newCart[productId];
+    const index = cart.findIndex((item) => item.id === productId);
+    if (index >= 0) {
+      const newCart = [...cart];
+      newCart[index].quantity -= 1;
+      if (newCart[index].quantity === 0) {
+        newCart.splice(index, 1);
       }
-      return newCart;
-    });
+      setCart(newCart);
+    }
   };
 
   // Clear the cart completely
   const handleClearCart = () => {
-    setCart({});
+    setCart([]);
   };
 
   // Update search term state when user types into the search bar
@@ -52,14 +57,15 @@ function App() {
   const searchResults = products.filter(
     (product) =>
       product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.description.toLowerCase().includes(searchTerm.toLowerCase())
+      product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.brand.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Compute the total price of the items in the cart
-  const totalPrice = Object.entries(cart).reduce(
-    (total, [productId, quantity]) =>
+  const totalPrice = cart.reduce(
+    (total, item) =>
       total +
-      products.find((product) => product.id === +productId).price * quantity,
+      item.quantity * products.find((product) => product.id === item.id).price,
     0
   );
 
@@ -68,6 +74,7 @@ function App() {
     <div className="app">
       <div className="shop-container">
         <h1 className="shop-name">Tropicana Hawaii fashion Shop</h1>
+        <img style={{ width: "180px" }} src={sun} alt="" />
       </div>
 
       <header className="header">
@@ -76,14 +83,7 @@ function App() {
 
       {/* SearchBar component */}
       <Search onSearch={handleSearch} />
-
-      <div className="main">
-        {/* ProductList component */}
-        <ProductList
-          products={searchTerm ? searchResults : products}
-          onAddToCart={handleAddToCart}
-        />
-
+      <div style={{ paddingBottom: "25px" }}>
         {/* Cart component */}
         <Cart
           productsData={products}
@@ -92,6 +92,27 @@ function App() {
           onClearCart={handleClearCart}
           totalPrice={totalPrice}
         />
+      </div>
+
+      <div className="main">
+        {/* Product component */}
+        <div className="product-list">
+          {searchTerm
+            ? searchResults.map((product) => (
+                <Product
+                  key={product.id}
+                  product={product}
+                  onAddToCart={handleAddToCart}
+                />
+              ))
+            : products.map((product) => (
+                <Product
+                  key={product.id}
+                  product={product}
+                  onAddToCart={handleAddToCart}
+                />
+              ))}
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@
     "price": 499,
     "articleNumber": "12345",
     "color": "NavyBlÅ",
-    "description": "En enkel blå skjorta i bomull.",
+    "description": "En exclusve blå herr skjorta i bomull.",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/R10-Star-Orchid-Navy_720x.png?v=1648053586"
   },
   {
@@ -16,7 +16,7 @@
     "price": 1199,
     "articleNumber": "23456",
     "color": "Röd",
-    "description": "En mjuk och skön röd silk Hawaii skjorta",
+    "description": "En mjuk och skön röd silk Hawaii herr skjorta",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/R10-Paradise-Panel-Red_720x.png?v=1673474077"
   },
   {
@@ -26,7 +26,7 @@
     "price": 999,
     "articleNumber": "34567",
     "color": "Ljusblå",
-    "description": "En ljusblå klassik Hawaii skjorta i exklusive kvalite silke.",
+    "description": "En ljusblå klassik Hawaii herr skjorta i exklusive kvalite silke.",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/PRF-R10-Orchid-Bamboo-Peri-1.jpg?v=1646251801"
   },
   {
@@ -36,7 +36,7 @@
     "price": 799,
     "articleNumber": "45678",
     "color": "Svart",
-    "description": "En snygg svart Hawaii skjorta i bomull.",
+    "description": "En snygg svart Hawaii herr skjorta i bomull.",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/258-R38-Black.png?v=1652376377"
   },
   {
@@ -45,8 +45,8 @@
     "brand": "Dolby Banana",
     "price": 732,
     "articleNumber": "56789",
-    "color": "Aqua",
-    "description": "En tun linné Aquablå färgat Hawaii-skjorta med pineapple motiver.",
+    "color": "Aquablå",
+    "description": "En tun linné Aquablå färgat Hawaii herr skjorta med pineapple motiver.",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/102C-HE-Slate-1_533x.jpg?v=1644102475"
   },
   {
@@ -56,13 +56,13 @@
     "price": 699,
     "articleNumber": "67890",
     "color": "Pink",
-    "description": "En bekväm och luftig rosa färgat Hawaii skjorta med flamingo motiver",
+    "description": "En bekväm och luftig rosa färgat Hawaii herr skjorta med flamingo motiver",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/102C-275-Pink-1_533x.jpg?v=1644257073"
   },
   {
     "id": 7,
     "name": "Ladies Waikiki",
-    "brand": "Nancy Trend",
+    "brand": "Dolby Banana",
     "price": 1199,
     "articleNumber": "78901",
     "color": "Ljusgrön",
@@ -106,7 +106,7 @@
     "price": 799,
     "articleNumber": "80808",
     "color": "Orange",
-    "description": "En färgglad skjorta med palmmotiv.",
+    "description": "En färgglad dam skjorta med palmmotiv.",
     "image": "https://www.tropicoolclothing.com.au/wp-content/uploads/2022/09/Sunset-Orange-Kaftan-.jpg"
   },
   {
@@ -116,7 +116,7 @@
     "price": 899,
     "articleNumber": "90909",
     "color": "Röd",
-    "description": "En röd skjorta med segelbåtsmotiv.",
+    "description": "En röd dam skjorta med segelbåtsmotiv.",
     "image": "https://cdn.shopify.com/s/files/1/0611/0586/4870/products/pf40-ginger-orchid-red_1080x.jpg?v=167028494"
   }
 ]

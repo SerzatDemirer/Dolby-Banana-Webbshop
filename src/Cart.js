@@ -19,16 +19,14 @@ function Cart(props) {
   return (
     <div className="cart">
       <h2>Kund korg</h2>
-      {/* Map over the cart object and render each item in a list */}
+      {/* Map over the cart array and render each item in a list */}
       <ul>
-        {Object.entries(cart).map(([productId, quantity]) => (
-          <li key={productId}>
+        {cart.map(({ id, quantity }) => (
+          <li key={id}>
             {/* Find the corresponding product name from productsData array */}
-            {productsData.find((product) => product.id === +productId).name} (
-            {quantity}) {/* Call the function to remove the item from cart */}
-            <button onClick={() => handleRemoveFromCart(productId)}>
-              Ta bort
-            </button>
+            {productsData.find((product) => product.id === id).name} ({quantity}
+            ){/* Call the function to remove the item from cart */}
+            <button onClick={() => handleRemoveFromCart(id)}>Ta bort</button>
           </li>
         ))}
       </ul>

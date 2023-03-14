@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import ProductModal from "./ProductModal";
 
-//...
 function Product(props) {
   const [showModal, setShowModal] = useState(false);
-
   const { product, onAddToCart } = props;
 
   const handleAddToCart = () => {
@@ -21,14 +19,16 @@ function Product(props) {
       <h3>{product.name}</h3>
       <p>Brand: {product.brand}</p>
       <p>Price: {product.price} kr</p>
-      <button onClick={handleAddToCart}>Lägg till kundkorg</button>
+      <button onClick={handleAddToCart}>Lägg till kundvagn</button>
       <button onClick={showProductDetailModal}>Mer info</button>
 
-      <ProductModal
-        onClose={showProductDetailModal}
-        show={showModal}
-        product={product}
-      />
+      {showModal && (
+        <ProductModal
+          onClose={showProductDetailModal}
+          show={showModal}
+          product={product}
+        />
+      )}
     </div>
   );
 }
