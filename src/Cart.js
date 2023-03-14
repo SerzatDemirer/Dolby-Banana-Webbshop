@@ -1,37 +1,45 @@
 import React from "react";
 
 function Cart(props) {
+  // Destructure props for easier use
   const { productsData, cart, onRemoveFromCart, onClearCart, totalPrice } =
     props;
 
-  const cartItems = Object.entries(cart);
-
+  // Define function to remove an item from cart and call parent function
   const handleRemoveFromCart = (productId) => {
     onRemoveFromCart(productId);
   };
 
+  // Define function to clear cart and call parent function
   const handleClearCart = () => {
     onClearCart();
   };
 
+  // Render the component
   return (
     <div className="cart">
-      <h2>Kundvagn</h2>
+      <h2>Kund korg</h2>
+      {/* Map over the cart object and render each item in a list */}
       <ul>
-        {cartItems.map(([productId, quantity]) => (
+        {Object.entries(cart).map(([productId, quantity]) => (
           <li key={productId}>
-            {productsData.find((p) => p.id === +productId).name} ({quantity}){" "}
+            {/* Find the corresponding product name from productsData array */}
+            {productsData.find((product) => product.id === +productId).name} (
+            {quantity}) {/* Call the function to remove the item from cart */}
             <button onClick={() => handleRemoveFromCart(productId)}>
               Ta bort
             </button>
           </li>
         ))}
       </ul>
-      <p>Totalt: {totalPrice} kr</p>
-      <button onClick={handleClearCart}>Töm kundvagnen</button>
-      <button>Gå till kassan</button>
+      {/* Render the total price of items in cart */}
+      <p>Total: {totalPrice} kr</p>
+      {/* Call the function to clear the cart */}
+      <button onClick={handleClearCart}>Töm kundkorg</button>
+      <button>Köp nu</button>
     </div>
   );
 }
 
+// Export the component as default
 export default Cart;

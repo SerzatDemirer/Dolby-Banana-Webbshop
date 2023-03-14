@@ -6,27 +6,27 @@
     "price": 499,
     "articleNumber": "12345",
     "color": "NavyBlÅ",
-    "description": "En enkel blå t-shirt i bomull.",
+    "description": "En enkel blå skjorta i bomull.",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/R10-Star-Orchid-Navy_720x.png?v=1648053586"
   },
   {
     "id": 2,
     "name": "Jungle Bird",
     "brand": "GANT",
-    "price": 2549,
+    "price": 1199,
     "articleNumber": "23456",
     "color": "Röd",
-    "description": "En mjuk och skön silk Hawaii skjorta",
+    "description": "En mjuk och skön röd silk Hawaii skjorta",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/R10-Paradise-Panel-Red_720x.png?v=1673474077"
   },
   {
     "id": 3,
     "name": "Orchid Paradise",
-    "brand": "Waimea Causals",
-    "price": 699,
+    "brand": "Gant",
+    "price": 999,
     "articleNumber": "34567",
-    "color": "Ljus blå",
-    "description": "Klassiska Aloha Skjorta.",
+    "color": "Ljusblå",
+    "description": "En ljusblå klassik Hawaii skjorta i exklusive kvalite silke.",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/PRF-R10-Orchid-Bamboo-Peri-1.jpg?v=1646251801"
   },
   {
@@ -42,11 +42,11 @@
   {
     "id": 5,
     "name": "Pineapple Party",
-    "brand": "Two Palms Hawaii",
+    "brand": "Dolby Banana",
     "price": 732,
     "articleNumber": "56789",
     "color": "Aqua",
-    "description": "En tun linné Aqua färgat Hawaii-skjorta med pineapple motiver.",
+    "description": "En tun linné Aquablå färgat Hawaii-skjorta med pineapple motiver.",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/102C-HE-Slate-1_533x.jpg?v=1644102475"
   },
   {
@@ -56,7 +56,7 @@
     "price": 699,
     "articleNumber": "67890",
     "color": "Pink",
-    "description": "En bekväm och luftig Pink färgat Hawaii skjorta med flamingo motiver",
+    "description": "En bekväm och luftig rosa färgat Hawaii skjorta med flamingo motiver",
     "image": "https://cdn.shopify.com/s/files/1/0586/0930/3750/products/102C-275-Pink-1_533x.jpg?v=1644257073"
   },
   {
@@ -65,7 +65,7 @@
     "brand": "Nancy Trend",
     "price": 1199,
     "articleNumber": "78901",
-    "color": "Ljus blå",
+    "color": "Ljusgrön",
     "description": "Snygg silke ljusgrön dam-skjorta med tropiska plant och blomma motiver på",
     "image": "https://cdn.shopify.com/s/files/1/0611/0586/4870/products/pf45-white-ginger-khaki_720x.jpg?v=1654988130"
   },
@@ -82,7 +82,7 @@
   {
     "id": 9,
     "name": "Ljusblå Skjorta",
-    "brand": "Aloha Shirt Shop",
+    "brand": "Aloha Republic",
     "price": 999,
     "articleNumber": "90123",
     "color": "Blå",
@@ -102,7 +102,7 @@
   {
     "id": 11,
     "name": "Sunset Palms",
-    "brand": "Waimea Causals",
+    "brand": "Dolby Banana",
     "price": 799,
     "articleNumber": "80808",
     "color": "Orange",
@@ -112,11 +112,11 @@
   {
     "id": 12,
     "name": "Sailboat Ocean",
-    "brand": "Two Palms Hawaii",
+    "brand": "Dolby Banana",
     "price": 899,
     "articleNumber": "90909",
-    "color": "Blue",
-    "description": "En blå skjorta med segelbåtsmotiv.",
+    "color": "Röd",
+    "description": "En röd skjorta med segelbåtsmotiv.",
     "image": "https://cdn.shopify.com/s/files/1/0611/0586/4870/products/pf40-ginger-orchid-red_1080x.jpg?v=167028494"
   }
 ]

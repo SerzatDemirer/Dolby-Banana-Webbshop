@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProductModal from "./ProductModal";
 
-// ...
+//...
 function Product(props) {
   const [showModal, setShowModal] = useState(false);
 
@@ -19,9 +19,9 @@ function Product(props) {
     <div className="product">
       <img src={product.image} alt={product.name} />
       <h3>{product.name}</h3>
-      <p>{product.description}</p>
-      <p>Pris: {product.price} kr</p>
-      <button onClick={handleAddToCart}>Lägg till i kundvagnen</button>
+      <p>Brand: {product.brand}</p>
+      <p>Price: {product.price} kr</p>
+      <button onClick={handleAddToCart}>Lägg till kundkorg</button>
       <button onClick={showProductDetailModal}>Mer info</button>
 
       <ProductModal

@@ -10,7 +10,7 @@ function Search(props) {
 
   const handleClear = () => {
     setSearchTerm("");
-    props.onClear();
+    //props.onClear("");
   };
 
   return (
@@ -23,7 +23,7 @@ function Search(props) {
           onChange={(event) => setSearchTerm(event.target.value)}
         />
         <button type="submit">Sök</button>
-        <button type="button" onClick={handleClear}>
+        <button type="submit" onClick={handleClear}>
           Rensa sökning
         </button>
       </form>
