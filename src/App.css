@@ -2,6 +2,7 @@
   background-image: url("https://thumbs.dreamstime.com/b/pineapple-banana-mango-isolated-white-background-clipping-path-pineapple-banana-mango-isolated-white-159747367.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 16px;
 
   /* background-size: 100% 150%; */
 }
@@ -138,6 +139,20 @@ button {
   border-radius: 22px;
   margin-top: 20px;
   box-shadow: 5px 5px 10px #ccc;
+}
+
+.bill {
+  width: 35%;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-name {
+  width: 60%;
+  font-size: 45px;
+  color: yellow;
+  font-family: Pacifico, cursive;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .cart h2 {

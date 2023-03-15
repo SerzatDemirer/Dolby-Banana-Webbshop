@@ -19,27 +19,31 @@ function App() {
 
   // Add an item to the cart or increase its quantity
   const handleAddToCart = (product) => {
-    const index = cart.findIndex((item) => item.id === product.id);
-    if (index >= 0) {
-      const newCart = [...cart];
-      newCart[index].quantity += 1;
-      setCart(newCart);
-    } else {
-      const newCart = [...cart, { ...product, quantity: 1 }];
-      setCart(newCart);
-    }
+    const itemInCart = cart.find((item) => item.id === product.id);
+    itemInCart
+      ? setCart(
+          cart.map((item) =>
+            item.id === product.id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          )
+        )
+      : setCart([...cart, { ...product, quantity: 1 }]);
   };
 
   // Remove an item from the cart or decrease its quantity
   const handleRemoveFromCart = (productId) => {
-    const index = cart.findIndex((item) => item.id === productId);
-    if (index >= 0) {
-      const newCart = [...cart];
-      newCart[index].quantity -= 1;
-      if (newCart[index].quantity === 0) {
-        newCart.splice(index, 1);
-      }
-      setCart(newCart);
+    const itemInCart = cart.find((item) => item.id === productId);
+    if (itemInCart.quantity === 1) {
+      setCart(cart.filter((item) => item.id !== productId));
+    } else {
+      setCart(
+        cart.map((item) =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+      );
     }
   };
 
@@ -54,11 +58,10 @@ function App() {
   };
 
   // Filter the products based on the search term
-  const searchResults = products.filter(
+  const filteredData = products.filter(
     (product) =>
       product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.brand.toLowerCase().includes(searchTerm.toLowerCase())
+      product.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Compute the total price of the items in the cart
@@ -68,7 +71,6 @@ function App() {
       item.quantity * products.find((product) => product.id === item.id).price,
     0
   );
-
   // Render the app
   return (
     <div className="app">
@@ -82,11 +84,13 @@ function App() {
       </header>
 
       {/* SearchBar component */}
-      <Search onSearch={handleSearch} />
+      <Search
+        onSearch={handleSearch}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
       <div style={{ paddingBottom: "25px" }}>
         {/* Cart component */}
         <Cart
-          productsData={products}
           cart={cart}
           onRemoveFromCart={handleRemoveFromCart}
           onClearCart={handleClearCart}
@@ -97,21 +101,14 @@ function App() {
       <div className="main">
         {/* Product component */}
         <div className="product-list">
-          {searchTerm
-            ? searchResults.map((product) => (
-                <Product
-                  key={product.id}
-                  product={product}
-                  onAddToCart={handleAddToCart}
-                />
-              ))
-            : products.map((product) => (
-                <Product
-                  key={product.id}
-                  product={product}
-                  onAddToCart={handleAddToCart}
-                />
-              ))}
+          {/* Map over products or search results based on the search term */}
+          {filteredData.map((product) => (
+            <Product
+              key={product.id}
+              product={product}
+              onAddToCart={handleAddToCart}
+            />
+          ))}
         </div>
       </div>
     </div>

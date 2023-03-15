@@ -1,11 +1,8 @@
 import React from "react";
 
-function Cart(props) {
-  // Destructure props for easier use
-  const { productsData, cart, onRemoveFromCart, onClearCart, totalPrice } =
-    props;
-
-  // Define function to remove an item from cart and call parent function
+//Cart function with essential props.
+function Cart({ cart, onRemoveFromCart, onClearCart, totalPrice }) {
+  // Define function to remove an item from cart and callback (onRemoveFromCart) to main remove function
   const handleRemoveFromCart = (productId) => {
     onRemoveFromCart(productId);
   };
@@ -14,19 +11,19 @@ function Cart(props) {
   const handleClearCart = () => {
     onClearCart();
   };
-
   // Render the component
   return (
     <div className="cart">
       <h2>Kund korg</h2>
       {/* Map over the cart array and render each item in a list */}
       <ul>
-        {cart.map(({ id, quantity }) => (
-          <li key={id}>
-            {/* Find the corresponding product name from productsData array */}
-            {productsData.find((product) => product.id === id).name} ({quantity}
-            ){/* Call the function to remove the item from cart */}
-            <button onClick={() => handleRemoveFromCart(id)}>Ta bort</button>
+        {cart.map((cartItem) => (
+          <li key={cartItem.id}>
+            <span>{cartItem.name} </span>
+            <span>({cartItem.quantity})</span>
+            <button onClick={() => handleRemoveFromCart(cartItem.id)}>
+              Ta bort
+            </button>
           </li>
         ))}
       </ul>

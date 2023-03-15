@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import ProductModal from "./ProductModal";
 
-function Product(props) {
+function Product({ product, onAddToCart }) {
   const [showModal, setShowModal] = useState(false);
-  const { product, onAddToCart } = props;
 
   const handleAddToCart = () => {
     onAddToCart(product);
   };
 
   const showProductDetailModal = () => {
-    setShowModal(!showModal);
+    setShowModal(true);
+  };
+
+  const closeProductDetailModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -24,8 +27,7 @@ function Product(props) {
 
       {showModal && (
         <ProductModal
-          onClose={showProductDetailModal}
-          show={showModal}
+          closeProductDetailModal={closeProductDetailModal}
           product={product}
         />
       )}

@@ -1,15 +1,10 @@
 import React from "react";
 
-function ProductModal(props) {
-  const { product, onClose, show } = props;
-
+function ProductModal({ product, closeProductDetailModal }) {
   const handleClose = () => {
-    onClose();
+    closeProductDetailModal();
   };
 
-  if (!show) {
-    return null;
-  }
   return (
     <div className="modal" id="modal">
       <div className="modal-content">
